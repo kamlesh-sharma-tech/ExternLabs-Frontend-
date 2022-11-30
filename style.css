@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  text-align: center;
+  margin-top: 20px;
+}
+
+img {
+  height: 250px;
+  width: 350px;
+}
+
+#images {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+#images div {
+  margin: 0 4px 4px 4px;
+  padding: 0.4em;
+  display: inline-block;
+}
+
+
+.imageClass {
+  border: 1px solid #006400;
+  width: 350px;
+}
