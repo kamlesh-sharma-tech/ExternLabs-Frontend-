@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <meta charset="utf-8">
     <title>Image Slider with Drag and Drop</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-</head>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <div class="carousel" id="images">
+        
+            <img src="images/html.png" alt="img" dragging="false">
+       
+            <img src="images/css.png" alt="img">
+      
+            <img src="images/javascript.png" alt="img">
+        
+            <img src="images/php.png" alt="img">
+     
+            <img src="images/mysql.png" alt="img">
 
-<body>
+            <img src="images/github.png" alt="img">
 
-    <h1>Image Slider with Drag and Drop Feature</h1>
-
-    <div id="images">
-        <div id="image1" class="imageClass">
-            <img src="images/html.png" alt="">
-        </div>
-
-        <div id="image2" class="imageClass">
-            <img src="images/css.png" alt="">
-        </div>
-
-        <div id="image3" class="imageClass">
-            <img src="images/javascript.png" alt="">
-        </div>
-
-        <div id="image4" class="imageClass">
-            <img src="images/php.png" alt="">
-        </div>
-
-        <div id="image5" class="imageClass">
-            <img src="images/mysql.png" alt="">
-        </div>
-
-        <div id="image6" class="imageClass">
-            <img src="images/nodejs.png" alt="">
-        </div>
-
-        <div id="image7" class="imageClass">
-            <img src="images/github.png" alt="">
-        </div>
+            <img src="images/nodejs.png" alt="img">
+        
+      </div>
+      <i id="right" class="fa-solid fa-angle-right"></i>
     </div>
-
-    <script src="script.js"></script>
-</body>
-
+    
+  </body>
 </html>

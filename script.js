@@ -1,15 +1,24 @@
 $(function () {
   $("#images").sortable({
     update: function (event, ui) {
-      getIdsOfImages();
-    }, //end update
+    },
   });
 });
 
-function getIdsOfImages() {
-  var values = [];
-  $(".imageClass").each(function (index) {
-    values.push($(this).attr("id").replace("imageNo", ""));
-  });
-  $("#outputvalues").val(values);
+const carousel = document.querySelector(".carousel"),
+firstImg = carousel.querySelectorAll("img")[0],
+arrowIcons = document.querySelectorAll(".wrapper i");
+
+const showHideIcons = () => {
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; 
+    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
 }
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        let firstImgWidth = firstImg.clientWidth + 14; 
+        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+        setTimeout(() => showHideIcons(), 60); 
+    });
+});
